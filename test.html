@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Gallery with Lightbox</title>
+
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <style>
+        /* Basic reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        /* Masonry grid container */
+        .masonry {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Columns */
+        .masonry-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Images */
+        .masonry-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .masonry-column img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .masonry {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="masonry">
+        <div class="masonry-column">
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+            </a>
+        </div>
+        <div class="masonry-column">
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+            </a>
+        </div>
+        <div class="masonry-column">
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+            </a>
+        </div>
+        <div class="masonry-column">
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+            </a>
+            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" class="glightbox">
+                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+        // Initialize GLightbox
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+        });
+
+        // Optional: fade-in effect for images
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".masonry img");
+            images.forEach(img => {
+                img.style.opacity = 0;
+                img.style.transition = "opacity 0.5s ease-in-out";
+                img.onload = () => {
+                    img.style.opacity = 1;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

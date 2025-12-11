@@ -1,0 +1,10 @@
+:root {
+  --primary: #47ccff;
+  --secondary: #8ac6dd;
+}
+
+
+
+.primary_color{
+    color: var(--primary);
+}

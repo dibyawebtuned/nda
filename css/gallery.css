@@ -1,0 +1,116 @@
+.gallery-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  padding: 20px 10px;
+}
+.masonry-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.masonry-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.09);
+}
+
+/* ================================
+   Large Laptops (1024px – 1199px)
+   Slight gap reduction
+================================ */
+@media (max-width: 1199px) {
+  .gallery-section {
+    gap: 14px;
+    padding: 18px 10px;
+  }
+}
+
+/* ================================
+   Tablets (768px – 1023px)
+   Convert to 2-column layout
+================================ */
+@media (max-width: 1023px) {
+  .gallery-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+/* ================================
+   Large Mobile (600px – 767px)
+   Slightly bigger spacing
+================================ */
+@media (max-width: 767px) {
+  .gallery-section {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .masonry-column {
+    gap: 14px;
+  }
+
+  .image-wrapper {
+    border-radius: 6px;
+  }
+}
+
+/* ================================
+   Mobile Phones (480px – 599px)
+================================ */
+@media (max-width: 599px) {
+  .gallery-section {
+    padding: 16px 8px;
+  }
+
+  .masonry-column {
+    gap: 12px;
+  }
+}
+
+/* ================================
+   Small Mobile (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  .gallery-section {
+    padding: 14px 6px;
+  }
+
+  .masonry-column img {
+    border-radius: 6px;
+  }
+}
+
+/* ================================
+   Very Small Devices (≤ 360px)
+================================ */
+@media (max-width: 480px) {
+  .gallery-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px 15px;
+  }
+
+  .masonry-column {
+    gap: 10px;
+  }
+
+  .masonry-column img {
+    border-radius: 5px;
+  }
+}

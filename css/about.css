@@ -1,0 +1,390 @@
+.why-choose-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin: 0px 20px;
+  background: #8ac6dd;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  /* margin-bottom: 80px; */
+}
+
+.why-choose-section .why-choose-title-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 80px;
+}
+
+.why-choose-section-title,
+.why-choose-section-desc {
+  flex: 1;
+}
+
+.why-choose-section .why-choose-section-title h3,
+.approach-section .approach-section-title-content .appraoch-section-title h3 {
+  position: relative;
+  display: inline-block;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+  color: white;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.why-choose-section .why-choose-section-title h3:before,
+.approach-section
+  .approach-section-title-content
+  .appraoch-section-title
+  h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.why-choose-section .why-choose-section-title h2,
+.approach-section .approach-section-title-content .appraoch-section-title h2 {
+  color: white;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  cursor: none;
+}
+
+.why-choose-section .why-choose-section-title h2 span,
+.approach-section
+  .approach-section-title-content
+  .appraoch-section-title
+  h2
+  span {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.why-choose-section-desc p {
+  color: rgb(244, 244, 244);
+}
+
+.why-choose-content {
+  display: flex;
+  gap: 30px;
+  padding: 0px 80px;
+  padding-bottom: 80px;
+}
+.why-choose-content-left,
+.why-choose-content-middle,
+.why-choose-content-right {
+  flex: 1;
+}
+
+.why-choose-content-left,
+.why-choose-content-right {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.why-choose-content-left,
+.why-choose-content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.why-choose-content-left span,
+.why-choose-content-right span {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.why-choose-content-left p,
+.why-choose-content-right p {
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+
+.why-choose-content-middle {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ========== MISSION ========== */
+.benefits-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.benefits-section .benefits-section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits-section .benefits-section-title h3 {
+  position: relative;
+  display: inline-block;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #273a29;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.benefits-section .benefits-section-title h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #47ccff;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.benefits-section .benefits-section-title h2 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  cursor: none;
+}
+
+.benefits-section .benefits-section-title h2 span {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.benefits-content .benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+/* Remove border from the last item */
+.benefits-content .benefit:last-child {
+  border-right: none;
+}
+
+.benefits-content .benefit .benefit-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #8ac6dd;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.benefits-content .benefit .benefit-icon i {
+  font-size: 30px;
+  color: white;
+  transition: color 0.3s;
+}
+
+/* Change icon bg when user hovers over the benefit */
+.benefits-content .benefit:hover .benefit-icon {
+  background-color: #47ccff;
+}
+
+/* Optional: change icon color on hover */
+.benefits-content .benefit:hover .benefit-icon i {
+  color: #fff;
+}
+
+.benefits-content .benefit .benefit-title-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.benefits-content .benefit .benefit-title-desc h3 {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.benefits-content .benefit .benefit-title-desc p {
+  line-height: 1.5;
+}
+
+/* ============ Approach Section CSS ============ */
+.approach-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin: 0px 20px;
+  border-radius: 20px;
+  padding: 80px;
+  background: #8ac6dd;
+  display: flex;
+  gap: 40px;
+}
+
+.approach-section-title-content,
+.approach-content {
+  flex: 1;
+}
+
+.appraoch-section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appraoch-section-title p {
+  color: white;
+}
+
+.approach-section-image {
+  border-radius: 20px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.approach-section .approach-content {
+  direction: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.approach-content .approach-content-img {
+  border-radius: 20px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.approach-content .approach-content-img img {
+  width: 100%;
+  height: auto;
+}
+
+.approach-content .approach-content-point {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.approach-content .approach-content-point .point {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: start;
+}
+
+.approach-content .approach-content-point .point .point-icons {
+  width: 115px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #5fa1bc;
+}
+
+.approach-content .approach-content-point .point .point-icons i {
+  font-size: 20px;
+  color: white;
+}
+
+.approach-content .approach-content-point .point .point-title-desc h4 {
+  /* border: 1px solid green; */
+}
+
+.approach-content .approach-content-point .point .point-title-desc p {
+  margin-bottom: 0px;
+  color: white;
+  line-height: 1.3;
+}
+
+/* ============ How We Work CSS ============ */
+.how-we-work {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin: 0px 20px;
+  padding: 80px;
+}
+
+.how-we-work .how-we-work-title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-we-work .how-we-work-title-content h3 {
+  position: relative;
+  display: inline-block;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #273a29;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.how-we-work .how-we-work-title-content h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #47ccff;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.how-we-work .how-we-work-title-content h2 {
+  /* border: 2px solid red; */
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  cursor: none;
+}
+
+.how-we-work .how-we-work-title-content h2 span {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-style: italic;
+}

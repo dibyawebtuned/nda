@@ -5676,7 +5676,6 @@ header.main-header .header-sticky.active {
   }
 
   .about-body-content {
-    width: calc(100% - 120px);
   }
 
   .about-us-list {
@@ -6657,7 +6656,12 @@ header.main-header .header-sticky.active {
     margin-top: -170px;
   }
 
+  .about-body-content {
+    width: 100%;
+  }
+
   .about-body-content p {
+    width: 100%;
     font-size: 14px;
   }
 

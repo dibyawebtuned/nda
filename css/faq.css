@@ -13,6 +13,41 @@ main {
   gap: 50px;
 }
 .faq-main-content-left,
-.faq-main-content-right{
-    flex: 1;
+.faq-main-content-right {
+  flex: 1;
+}
+
+/* ===== Extra Small Devices (Phones <576px) ===== */
+@media (max-width: 575px) {
+  .faq-main-content {
+    /* border: 3px solid red; */
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+/* ===== Small Devices (Phones ≥576px) ===== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .faq-main-content {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+/* ===== Medium Devices (Tablets ≥768px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .faq-main-content {
+    padding: 30px 20px;
+  }
+}
+
+/* ===== Large Devices (Desktops ≥992px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .faq-main-content {
+    padding: 30px 20px;
+  }
+}
+
+/* ===== Extra Large Devices (Large desktops ≥1200px) ===== */
+@media (min-width: 1200px) {
 }

@@ -62,23 +62,29 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index-video.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
 
                                 <li class="nav-item submenu"><a class="nav-link" href="#">How We Help</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Support
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="services/service_one.html">Support
                                                 Worker Matching</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Change My
+                                        <li class="nav-item"><a class="nav-link" href="services/service_two.html">Change
+                                                My
                                                 Support Worker</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="case-study.html">Connect with
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="services/service_three.html">Connect with
                                                 NDIS Providers</a>
                                         </li>
                                         <li class="nav-item"><a class="nav-link"
-                                                href="case-study-single.html">Multilingual & Cultural Support</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Admin Support for NDIS
+                                                href="services/service_four.html">Multilingual & Cultural Support</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="services/service_five.html">Admin
+                                                Support for NDIS
                                                 Providers</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">NDIS Invoicing
+                                        <li class="nav-item"><a class="nav-link" href="services/service_six.html">NDIS
+                                                Invoicing
                                                 & Compliance Support</a></li>
 
                                     </ul>
@@ -93,7 +99,7 @@
 
                         <!-- Header Btn Start -->
                         <div class="header-btn primary_color">
-                            <a href="book-appointment.html" class="btn-default">book appointment</a>
+                            <a href="appointment.html" class="btn-default">book appointment</a>
                         </div>
                         <!-- Header Btn End -->
                     </div>
@@ -353,29 +359,39 @@
 
 
     <!-- GLightbox JS -->
+    <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
     <script>
-        // Initialize GLightbox
-        const lightbox = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-            loop: true,
-            zoomable: true,
-        });
-
-        // Optional: fade-in effect for images
         document.addEventListener("DOMContentLoaded", function () {
+            // Initialize GLightbox
+            const lightbox = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                zoomable: true,
+                openEffect: 'fade',
+                closeEffect: 'fade',
+            });
+
+            // Optional: fade-in effect for images
             const images = document.querySelectorAll(".masonry img");
+
             images.forEach(img => {
-                img.style.opacity = 0;
-                img.style.transition = "opacity 0.5s ease-in-out";
-                img.onload = () => {
+                // Only apply fade if image is not already loaded
+                if (img.complete) {
                     img.style.opacity = 1;
+                } else {
+                    img.style.opacity = 0;
+                    img.style.transition = "opacity 0.5s ease-in-out";
+                    img.addEventListener('load', () => {
+                        img.style.opacity = 1;
+                    });
                 }
             });
         });
     </script>
+
 </body>
 
 </html>

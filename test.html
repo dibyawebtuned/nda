@@ -4,138 +4,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masonry Gallery with Lightbox</title>
+    <title>Document</title>
 
-    <!-- GLightbox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* Basic reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-        }
-
-        /* Masonry grid container */
-        .masonry {
-            max-width: 1440px;
+        .matching-process-horizontal {
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .matching-process-title {
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        /* Horizontal wrapper */
+        .matching-timeline-horizontal {
             display: flex;
-            gap: 16px;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding-top: 40px;
         }
 
-        /* Columns */
-        .masonry-column {
-            flex: 1;
+        /* Horizontal dotted line */
+        .matching-timeline-horizontal::before {
+            content: "";
+            position: absolute;
+            top: 32px;
+            left: 0;
+            right: 0;
+            border-top: 2px dotted #ccc;
+            z-index: 1;
+        }
+
+        /* Each step */
+        .timeline-step-h {
+            width: 20%;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Icon style */
+        .timeline-icon-h {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 2px solid #4a90e2;
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
-            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            color: #4a90e2;
+            font-size: 20px;
+            margin: 0 auto 10px auto;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Images */
-        .masonry-column img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            cursor: pointer;
-            transition: transform 0.3s;
+        /* Text */
+        .timeline-step-h h4 {
+            margin: 10px 0 6px;
+            font-size: 18px;
+            color: #222;
         }
 
-        .masonry-column img:hover {
-            transform: scale(1.05);
+        .timeline-step-h p {
+            font-size: 14px;
+            color: #555;
+            padding: 0 10px;
         }
 
-        /* Responsive */
+        /* Mobile responsive — turns vertical */
         @media (max-width: 768px) {
-            .masonry {
+            .matching-timeline-horizontal {
                 flex-direction: column;
+                gap: 40px;
+                padding-left: 30px;
+            }
+
+            .matching-timeline-horizontal::before {
+                top: 0;
+                left: 22px;
+                bottom: 0;
+                width: 2px;
+                border-left: 2px dotted #ccc;
+                border-top: none;
+            }
+
+            .timeline-step-h {
+                width: 100%;
+                text-align: left;
+                position: relative;
+            }
+
+            .timeline-icon-h {
+                margin: 0;
+            }
+
+            .timeline-step-h h4,
+            .timeline-step-h p {
+                margin-left: 60px;
             }
         }
     </style>
 </head>
 
 <body>
+    <section class="matching-process-horizontal">
+        <h2 class="matching-process-title">How Our Matching Process Works</h2>
 
-    <div class="masonry">
-        <div class="masonry-column">
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-            </a>
+        <div class="matching-timeline-horizontal">
+
+            <!-- Step 1 -->
+            <div class="timeline-step-h">
+                <div class="timeline-icon-h"><i class="fas fa-comments"></i></div>
+                <h4>Consultation</h4>
+                <p>We discuss your needs, preferences, and care goals.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step-h">
+                <div class="timeline-icon-h"><i class="fas fa-clipboard-list"></i></div>
+                <h4>Assessment</h4>
+                <p>We identify the support level and matches needed.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step-h">
+                <div class="timeline-icon-h"><i class="fas fa-user-group"></i></div>
+                <h4>Matching</h4>
+                <p>We shortlist workers whose personalities align with yours.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step-h">
+                <div class="timeline-icon-h"><i class="fas fa-user-check"></i></div>
+                <h4>Verification</h4>
+                <p>We ensure the worker meets all skill and safety requirements.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="timeline-step-h">
+                <div class="timeline-icon-h"><i class="fas fa-handshake"></i></div>
+                <h4>Introduction</h4>
+                <p>You meet your selected support worker and begin.</p>
+            </div>
+
         </div>
-        <div class="masonry-column">
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-            </a>
-        </div>
-        <div class="masonry-column">
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-            </a>
-        </div>
-        <div class="masonry-column">
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-            </a>
-            <a href="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" class="glightbox">
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-            </a>
-        </div>
-    </div>
-
-    <!-- GLightbox JS -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-    <script>
-        // Initialize GLightbox
-        const lightbox = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-            loop: true,
-            zoomable: true,
-        });
-
-        // Optional: fade-in effect for images
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll(".masonry img");
-            images.forEach(img => {
-                img.style.opacity = 0;
-                img.style.transition = "opacity 0.5s ease-in-out";
-                img.onload = () => {
-                    img.style.opacity = 1;
-                }
-            });
-        });
-    </script>
-
+    </section>
 </body>
 
 </html>

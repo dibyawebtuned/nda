@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- Meta -->
@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Disable Help | Contact </title>
+    <title>Disable Help | Book Appointment</title>
 
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,10 +30,17 @@
     <link href="css/animate.css" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <!-- <link rel="stylesheet" href="css/mousecursor.css"> -->
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <!--  -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/appointment.css">
+
 </head>
 
 <body>
@@ -52,7 +59,7 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index-video.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
 
                                 <li class="nav-item submenu"><a class="nav-link" href="#">How We Help</a>
@@ -76,19 +83,20 @@
                                         <li class="nav-item"><a class="nav-link" href="services/service_six.html">NDIS
                                                 Invoicing
                                                 & Compliance Support</a></li>
+
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                                 <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                                <li class="nav-item highlighted-menu"><a class="nav-link"
-                                        href="book-appointment.html">book appointment</a></li>
+                                <li class="nav-item highlighted-menu"><a class="nav-link" href="appointment.html">book
+                                        appointment</a></li>
                             </ul>
                         </div>
 
                         <!-- Header Btn Start -->
                         <div class="header-btn primary_color">
-                            <a href="appointment.html" class="btn-default">book appointment</a>
+                            <a href="book-appointment.html" class="btn-default">book appointment</a>
                         </div>
                         <!-- Header Btn End -->
                     </div>
@@ -101,8 +109,8 @@
     </header>
     <!-- Header End -->
 
-    <main class="contact-content">
-        <!-- Top Banner -->
+    <main>
+        <!-- BANNER STARTS -->
         <section class="top-image-banner">
             <div class="parallax-img">
                 <img src="images/case-study-2.jpg" alt="Banner Image">
@@ -110,153 +118,92 @@
             <div class="overlay"></div>
 
             <div class="banner-text">
-                <h2 class="wow fadeInUp">Contact Us</h2>
-                <p class="wow fadeInUp">Need assistance finding a support worker or managing your NDIS services?</p>
+                <h2>Book Appointment</h2>
+                <p>Take a look at our gallery to see highlights, moments, and inspiration.</p>
             </div>
         </section>
+        <!-- BANNER ENDS -->
 
-        <!-- Contact Main Content Starts -->
-        <!--  -->
-        <section class="contact-section">
-            <div class="contact-section-content">
-                <div class="contact-section-content-left">
-                    <div class="title">Connect with us</div>
-                    <div class="title-content">
-                        <span>Connect with Us: NDIS Enquiries</span>
-                        <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti.
-                        </p>
-                        <div>
-                            <a href="about.html" class="btn-default">About Us</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="contact-section-content-middle">
-                    <div class="contact-section-content-middle-support">
-                        <span>Support</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque cupiditate vitae modi! Vel
-                            consequuntur repellendus quidem.</p>
+        <!-- Booking Form -->
+        <section class="booking-form">
+            <div class="container">
+                <div class="booking-form_box">
+                    <div class="booking-form_box_title">
+                        <h4>Take A Schedule Appointment</h4>
+                        <p>Our booking process is simple confidential and flexible to fit your schedule</p>
                     </div>
 
-                    <div class="support-info">
-                        <div class="phone">
-                            <div class="phone-circle">
-                                <i class="fa-solid fa-phone"></i>
+                    <div class="line"></div>
+
+                    <div class="booking-form_form">
+                        <form action="" class="get-quote-form">
+                            <!-- Name, Email -->
+                            <div class="name_email">
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name"
+                                        required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
                             </div>
 
-                            <div class="phone-content">
-                                <h2>Phone</h2>
-                                <span>0403 352 897</span>
-                            </div>
-                        </div>
-                        <div class="email">
-                            <div class="email-circle">
-                                <i class="fa-solid fa-envelope"></i>
+                            <!-- Phone, Appointment Date -->
+                            <div class="phone_date">
+                                <!-- Phone -->
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                        required>
+                                </div>
+
+                                <!-- Appointment Date -->
+                                <div class="form-group">
+                                    <label for="date">Preferred Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
                             </div>
 
-                            <div class="email-content">
-                                <h2>Email</h2>
-                                <span>info@disablehelp.com.au</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <!-- Appointment Time, Service Selection -->
+                            <div class="time_service">
+                                <!-- Appointment Time -->
+                                <div class="form-group">
+                                    <label for="time">Preferred Time</label>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
 
-                <div class="contact-section-content-right">
-                    <div class="contact-section-content-middle-contact">
-                        <span>Contact</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque cupiditate vitae modi! Vel
-                            consequuntur repellendus quidem.</p>
-                    </div>
-
-                    <div class="contact-info">
-                        <div class="location">
-                            <div class="location-circle">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-
-                            <div class="location-content">
-                                <h2>Location</h2>
-                                <span>0403 352 897</span>
-                            </div>
-                        </div>
-                        <div class="office-hours">
-                            <div class="office-hours-circle">
-                                <i class="fa-solid fa-envelope"></i>
+                                <!-- Service Selection -->
+                                <div class="form-group">
+                                    <label for="service">Select Service</label>
+                                    <select id="service" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="therapy">Therapy Session</option>
+                                        <option value="checkup">Checkup</option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <div class="office-hours-content">
-                                <h2>Email</h2>
-                                <span>info@disablehelp.com.au</span>
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Additional Message</label>
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Enter any additional details..."></textarea>
                             </div>
-                        </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-submit">Book Appointment</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- contact-from-map -->
-        <section class="contact-from-map">
-            <div class="contact-from-map-content">
-                <div class="contact-from-map-content-left">
-                    <div class="title">Connect with us</div>
-                    <div class="title-content">
-                        <span>Connect with Us: NDIS Enquiries</span>
-                        <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum
-                            deleniti atque corrupti.
-                        </p>
-                    </div>
-                </div>
-                <!-- <div class="contact-from-map-content-right"></div> -->
-                <div class="contact-from-map-content-right">
-                    <form class="contact-form-right">
-                        <!-- <h3>Contact Us</h3> -->
-
-                        <div class="name-email">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Full name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Email" required>
-                            </div>
-                        </div>
-
-                        <div class="phone-subject">
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Contact Number">
-                            </div>
-                            <div class="form-group">
-                                <input type="subject" id="subject" name="subject" placeholder="Subject">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-            <section class="map-section">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.748508197604!2d115.85749931520291!3d-31.95052738101219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b0c4b2c12345%3A0x123456789abcdef!2sPerth%2C%20Western%20Australia!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
-        </section>
-        <!-- Contact Main Content Ends -->
     </main>
 
     <!-- Footer Start -->

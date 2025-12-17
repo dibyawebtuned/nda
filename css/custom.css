@@ -681,7 +681,7 @@ header.main-header .header-sticky.active {
 }
 
 .slicknav_btn {
-  background: var(--accent-color);
+  background: var(--primary);
   padding: 0;
   display: flex;
   align-items: center;
@@ -738,7 +738,8 @@ header.main-header .header-sticky.active {
   position: absolute;
   width: 100%;
   padding: 0;
-  background: var(--primary-color);
+  /* background: var(--primary); */
+  background: #123d53;
 }
 
 .slicknav_menu ul {
@@ -761,13 +762,15 @@ header.main-header .header-sticky.active {
   margin: 0;
   border-radius: 0 !important;
   transition: all 0.3s ease-in-out;
+  /* border: 2px solid red; */
 }
 
 .slicknav_nav a:hover,
 .slicknav_nav a:focus,
 .slicknav_nav .slicknav_row:hover {
   background-color: transparent;
-  color: var(--accent-color);
+  color: white;
+  /* color: var(--accent-color); */
 }
 
 .slicknav_menu ul ul li a {

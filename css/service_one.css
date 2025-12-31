@@ -948,6 +948,7 @@ textarea {
 .worker-details li {
   margin: 6px 0;
   color: #555;
+  text-align: start;
 }
 
 .worker-details li.highlight {

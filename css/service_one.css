@@ -898,14 +898,15 @@ textarea {
 /* ---------- GRID ---------- */
 .worker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 24px;
   justify-content: start;
 }
 
 /* ---------- CARD ---------- */
 .worker-card {
-  max-width: 390px;
+  border: 3px solid red;
+  max-width: 430px;
   background-color: #fff;
   border-radius: 20px;
   padding: 22px;
@@ -916,7 +917,7 @@ textarea {
 
 .worker-photo {
   width: 100%;
-  height: 350px;
+  height: 390px;
   border-radius: 20px;
   object-fit: cover;
   margin-bottom: 15px;
